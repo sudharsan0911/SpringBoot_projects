@@ -1,0 +1,14 @@
+package com.ust.awslambda;
+
+public class TestLambda {
+	
+	public String status(String x)
+	{
+		Integer x1 = Integer.parseInt(x);
+		
+		return  (x1+x1)+"";
+	}
+	
+	
+
+}

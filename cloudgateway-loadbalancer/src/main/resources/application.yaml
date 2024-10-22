@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: spring-cloud-gateway-app
+
+  cloud:
+    gateway:
+      routes:
+        - id: helloservice-route
+          uri: lb://HELLOSERVICE
+          predicates:
+            - Path=/rest/service/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: helloServiceCircuitBreaker
+                fallbackUri: forward:/myfallback
+                
+
+server:
+  port: 9000
+  
+management:
+  endpoint:   
+    gateway:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"

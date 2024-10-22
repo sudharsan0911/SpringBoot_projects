@@ -1,0 +1,5 @@
+package com.ust.awslambda;
+
+public class TestLambda {
+
+}

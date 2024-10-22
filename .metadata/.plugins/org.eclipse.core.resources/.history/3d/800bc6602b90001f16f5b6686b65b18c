@@ -1,0 +1,13 @@
+package com.ust.awslambda;
+
+public class TestLambda {
+	
+	public String status()
+	{
+	
+		return  "i'm responding....!";
+	}
+	
+	
+
+}
